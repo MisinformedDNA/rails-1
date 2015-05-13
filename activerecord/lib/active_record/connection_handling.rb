@@ -110,6 +110,7 @@ module ActiveRecord
     end
 
     def retrieve_connection
+      puts Rails.configuration.database_configuration[Rails.env]
       connection_handler.retrieve_connection(self)
     end
 
